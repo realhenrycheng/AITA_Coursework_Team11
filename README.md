@@ -1,7 +1,12 @@
 # AITA_Coursework_Team11
 
-**Discussion on 17/3/2026:** 
+## Task 1: Medical Question Answering
 
-  Haoran & Lingshi: Preprocessing (DDL: 22/03). 
+### Work Division
 
-  Haoran & Lingshi: Text representation (DDL: 05/04).
+| Task | Assigned To | Deadline |
+|------|-------------|----------|
+| Data Preprocessing | Haoran & Lingshi | 22 Mar 2026 |
+| Text Representation (TF-IDF / Word2Vec / BERT) | Haoran & Lingshi | 05 Apr 2026 |
+
+> Last updated: 17 Mar 2026
