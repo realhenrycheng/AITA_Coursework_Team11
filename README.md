@@ -1,5 +1,7 @@
-** AITA_Coursework_Team11**
+# AITA_Coursework_Team11
 
-Step 1: Preprocessing (DL: 22/03)
+**Discussion on 17/3/2026:** 
 
-Step 2: Text representation (DL: 05/04)
+  Haoran & Lingshi: Preprocessing (DDL: 22/03). 
+
+  Haoran & Lingshi: Text representation (DDL: 05/04).
