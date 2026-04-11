@@ -1,0 +1,7 @@
+models/bio_embedding_extrinsic
+
+__pycache__/
+*.pyc
+*.pyo
+
+.vscode/
