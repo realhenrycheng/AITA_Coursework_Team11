@@ -1,3 +1,31 @@
+import string
+import re
+
+def clean_text_plus(text):
+    text = text.lower()
+    keep = {"-"}
+    puncts = "".join(c for c in string.punctuation if c not in keep)
+    text = text.translate(str.maketrans("", "", puncts))
+    tokens = [t for t in text.split() if not re.fullmatch(r"[\d.]+", t)]
+    return tokens
+
+LABEL_MAP_PREPROCESS = {"yes": 0, "no": 1, "maybe": 2}
+
+def build_input(sample):
+    question = sample["QUESTION"]
+    context  = " ".join(sample["CONTEXTS"])
+    return question + " " + context
+
+def preprocess_biowordvec(dataset, clean_fn=clean_text_plus):
+    tokens_list, labels = [], []
+    for pmid, sample in dataset.items():
+        tokens = clean_fn(build_input(sample))
+        tokens_list.append(tokens)
+        labels.append(LABEL_MAP_PREPROCESS[sample["final_decision"]])
+    return tokens_list, labels
+
+
+
 import json
 import numpy as np
 from gensim.models import KeyedVectors
@@ -6,12 +34,12 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report, confusion_matrix
 
 from pubmed_loader import PubMedQAData
-from preprocessing import preprocess_biowordvec, clean_text_plus
+
 
 # BioWordVec pretrained vectors can be downloaded from:
 # https://github.com/ncats/BioSentVec
 # File: BioWordVec_PubMed_MIMICIII_d200.vec.bin (word2vec bin format)
-MODEL_PATH  = r"E:\NLP_Models\BioWordVec_PubMed_MIMICIII_d200.vec.bin"
+MODEL_PATH  = r"E:\0000NLP_Models\BioWordVec_PubMed_MIMICIII_d200.vec.bin"
 LABEL_MAP   = {"yes": 0, "no": 1, "maybe": 2}
 LABEL_MAP_INV = {0: "yes", 1: "no", 2: "maybe"}
 LABEL_NAMES = ["yes", "no", "maybe"]
