@@ -16,7 +16,7 @@ def build_input(sample, use_mesh=False):
     return question, context
 
 def get_label(sample):
-    return sample["final_decision"]
+    return sample["final_decision"].lower().strip()
 
 # pubmedbert preprocessing
 def pubmedbert_preprocess(dataset, tokenizer, use_mesh=False, max_length=512):
