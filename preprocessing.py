@@ -85,7 +85,7 @@ def build_biowordvec_input(sample):
 '''
 
 # biowordvec preprocessing
-def preprocess_biowordvec(dataset, clean_fn=clean_text_basic, use_mesh=False):
+def preprocess_biowordvec(dataset, clean_fn=clean_text_plus, use_mesh=False):
     tokens_list = []
     labels      = []
 
