@@ -20,7 +20,7 @@ def evaluate(y_pred, y_true, split_name):
 
 
 # Plot confusion_matrix
-def plot_confusion_matrix(y_true, y_pred):
+def plot_confusion_matrix(y_true, y_pred, title="Confusion Matrix"):
     labels = ["yes", "no", "maybe"]
     cm = confusion_matrix(y_true, y_pred)
 
@@ -36,7 +36,7 @@ def plot_confusion_matrix(y_true, y_pred):
 
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
     disp.plot(cmap=plt.cm.Blues)
-    plt.title("Confusion Matrix")
+    plt.title(f"Confusion Matrix({title})")
     plt.show()
 
 # get error samples

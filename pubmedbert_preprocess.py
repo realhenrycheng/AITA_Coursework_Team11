@@ -27,20 +27,18 @@ LABEL_MAP = {
 # ---------------------------------------------------------
 
 def build_input(sample, use_mesh=False):
-    # Question field
     question = sample.get("QUESTION", "")
-
-    # Context field (list of sentences)
     context_list = sample.get("CONTEXTS", [])
     context = " ".join(context_list)
 
-    # Optional MeSH terms
     if use_mesh:
         mesh_list = sample.get("MESHES", [])
         if mesh_list:
-            context += " MeSH: " + "; ".join(mesh_list)
+            # PREPEND MeSH, do NOT append or duplicate context
+            context = "MeSH: " + "; ".join(mesh_list) + " " + context
 
     return question, context
+
 
 
 def get_label(sample):
@@ -73,7 +71,7 @@ def pubmedbert_preprocess(dataset, tokenizer, use_mesh=False, max_length=512):
         questions,
         contexts,
         max_length=max_length,
-        truncation="only_second",
+        truncation=True,
         padding="max_length",
         return_tensors="pt"
     )
