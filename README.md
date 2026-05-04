@@ -12,7 +12,7 @@
 | Haoran Cheng | qu25714@bristol.ac.uk | 2801283 |
 | Lingshi Gong | st25270@bristol.ac.uk | 2718589 |
 | Anis Binti Shahrulhisham | rl25787@bristol.ac.uk | 2800898 |
-| Pallavi Mallepura Kadirappa | je25284@bristol.ac.uk | |
+| Pallavi Mallepura Kadirappa | je25284@bristol.ac.uk | 2747384|
 | Alex Verboom | py25014@bristol.ac.uk | |
 
 ---
