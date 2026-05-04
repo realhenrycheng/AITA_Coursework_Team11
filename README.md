@@ -92,4 +92,60 @@
 
 ---
 
+## Jupyter Notebook (.ipynb)
+
+| File Name                                   | Description                                      | Owner   |
+|---------------------------------------------|--------------------------------------------------|---------|
+| Answer Quality Prediction.ipynb             | Full pipeline for predicting answer quality      | Alex    |
+| EDA.ipynb                                   | Initial Exploratory data analysis                | Lingshi |
+| final_eda.ipynb                             | Final EDA                                        | Alex    | 
+| baseline.ipynb                              | Baseline model                                   | Lingshi |
+| pubmed_loader.ipynb                         | PubMed loader                                    | Haoran  |
+| loadData_example.ipynb                      | Data loading example                             | Haoran  |
+
+#### TF-IDF Notebooks
+| File Name                                   | Description                                      | Owner   |
+|---------------------------------------------|--------------------------------------------------|---------|
+| TFIDF_MLP.ipynb                             | TF‑IDF vectorisation + MLP model                 | Lingshi |
+| TFIDF_SVM.ipynb                             | TF‑IDF vectorisation + SVM model                 | Lingshi |
+
+#### PubMedBERT Notebooks
+| File Name                                   | Description                                      | Owner   |
+|---------------------------------------------|--------------------------------------------------|---------|
+| pubmedbert_mlp.ipynb                        | PubMedBERT embeddings + MLP for comparison       | Anis    |
+| pubmedbert_mlp_original.ipynb               | PubMedBERT MLP Pipeline without class weight     | Anis    |
+| pubmedbert_mlp_improved.ipynb               | Improved architecture, tuning, and evaluation    | Anis    |
+| PubMedBERT_SVM(1) (1).ipynb                 | PubMedBERT embeddings + SVM for comparison       | Pallavi |
+
+#### BioWordVec Notebooks
+| File Name                                   | Description                                      | Owner   |
+|---------------------------------------------|--------------------------------------------------|---------|
+| biowordvec_mlp.ipynb                        | BioWordVec embeddings + MLP classifier           | Haoran  |
+| biowordvec_svm.ipynb                        | BioWordVec embeddings + SVM classifier           | Haoran  |
+
+#### BioGPT Notebooks
+| File Name                                   | Description                                      | Owner   |
+|---------------------------------------------|--------------------------------------------------|---------|
+| biogpt_zeroshot_experiment.ipynb            | BioGPT zero‑shot experiment                      | Haoran  |
+| biogpt_prompt_test_experiment.ipynb         | BioGPT prompt testing                            | Haoran  |
+| biogpt_lora_experiment.ipynb                | BioGPT LoRA experiment                           | Lingshi |
+| biogpt_lora_finetune.ipynb                  | BioGPT LoRA fine‑tuning                          | Lingshi |
+| biogpt_lora_finetune_roleprompt.ipynb       | BioGPT LoRA + role prompt                        | Lingshi |
+| biogpt_lora_roleprompt_experiment.ipynb     | BioGPT role‑prompt LoRA experiment               | Lingshi |
+| biogpt_optimization_EN.ipynb                | BioGPT optimization (EN)                         | Haoran  |
+| biogpt_optimization_lora.ipynb              | BioGPT LoRA optimization                         | Lingshi |
+| biogpt_optimization_lora_origin.ipynb       | BioGPT LoRA (control/original)                   | Lingshi |
+
+## Python Script (.py)
+
+| File Name                   | Description                                            | Owner   |
+|-----------------------------|--------------------------------------------------------|---------|
+| evaluation.py               | Core evaluation utilities                              | Lingshi |
+| evaluation_plot.py          | Function for generating evaluation plots               | Lingshi |
+| preprocessing.py            | Text preprocessing functions (cleaning)                | Lingshi |
+| pubmedbert_preprocess.py    | Preprocessing specifically for PubMedBERT + MLP models | Anis    |
+| pubmed_loader.py            | Load and structured PubMed dataset for modelling       | Haoran  |
+| get_human_performance.py    | Compute human baseline performance for comparison      | Haoran  |
+
+
 *Last updated: May 2026*
