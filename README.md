@@ -79,7 +79,6 @@
 |---------|-------------|
 | 2.1 Background & Motivation | Full section |
 | 5.2.5 PubMedBERT + SVM | Experimental setup |
-| 5.3.4 PubMedBERT | PubMedBERT + SVM results paragraph |
 | 8. Reference | Full section |
 
 ---
